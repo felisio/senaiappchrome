@@ -1,0 +1,56 @@
+<!doctype html>
+<html data-ng-app="clockapp" data-ng-csp="">
+  <head>
+    <meta charset="UTF-8">
+    <title>SENAI BAHIA</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/angular-csp.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div ng-controller="MainCtrl">
+            <div id="datetime">
+                <h1>{{ date.raw | date:'HH : mm : ss' }}</h1>
+                <!--<h2>{{ date.raw | date:'EEEE, MMMM yyyy' }}</h2>-->
+                <h2>{{ date.mes }}</h2>    
+            </div>
+            
+            <div id="forecast">
+                 <!--<pre>{{ weather.forecast | json }}</pre> -->
+                <ul class="row list-unstyled">
+                    <li ng-repeat="day in weather.forecast.forecastday" class="col-md-3">
+                      <!--<div ng-class="{today: $index == 0}">-->
+                      <div>
+                        <!--<img class="{{ day.icon }}" ng-src="{{ day.icon_url }}" />-->
+                        <img class="icon-tempo" ng-src="{{ day.icon_url }}" />
+                        <h3>{{ day.high.celsius }} °c</h3>
+                        <!--<h4 ng-if="$index == 0">Now</h4>-->
+                        <h4 ng-if="$index != 0">{{ day.date.weekday }}</h4>
+                        <!--<h6>{{ day.conditions }}</h6>-->
+                      </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row links">
+                <ul>
+                    <li class="col-md-3"><a href="http://portais.fieb.org.br/senai/"><div class="icon-portal">&nbsp;</div></a></li>
+                    <li class="col-md-3"><a href="http://fiebnet/intranet/"><div class="icon-intranet">&nbsp;</div></a></li>
+                    <li class="col-md-3"><a href="http://sjob.fieb.org.br/"><div class="icon-sjob">&nbsp;</div></a></li>
+                    <li class="col-md-3"><a href="https://webmail.fieb.org.br/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fwebmail.fieb.org.br%2fowa%3fisnewwindow%3d1%26isnewwindow2%3d%26mailbox%3dfabionunes%2540fieb.org.br"><div class="icon-webmail">&nbsp;</div></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./js/vendor/angular.min.js"></script>
+    <script src="./js/vendor/angular-route.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

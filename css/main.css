@@ -1,0 +1,98 @@
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src:  local('Lato Hairline'), 
+        local('Lato-Hairline'), 
+        url(http://themes.googleusercontent.com/static/fonts/lato/v6/boeCNmOCCh-EWFLSfVffDg.woff) format('woff'),
+        url('fonts/Lato 100.ttf') format('woff');
+}
+
+.container{
+    width: 100%;
+    position: relative;
+    margin:0 auto;
+}
+
+body{
+    
+    color: #0750a4;
+    background: url('../images/back.jpg');
+    
+}
+
+.logo{
+    width: 190px;
+    margin:0 auto;
+    margin-top:20px;
+}
+.icon-portal{
+    background: url('../images/icon-portal.png') no-repeat;
+    width: 223px;
+    height: 196px;
+}
+.icon-intranet{
+    background: url('../images/intranet.png') no-repeat;
+    width: 223px;
+    height: 196px;
+}
+.icon-sjob{
+    background: url('../images/sjob.png') no-repeat;
+    width: 223px;
+    height: 196px;
+}
+.icon-webmail{
+    background: url('../images/webmail.png') no-repeat;
+    width: 223px;
+    height: 196px;
+}
+#datetime{
+    text-align: center;
+}
+
+#datetime h1{
+    font-size: 6.1em;
+    font-family: 'Lato', sans-serif !important;
+}
+
+#datetime h2{
+    font-size: 1.0em;
+}
+
+.links{
+    width: 960px;
+    position: relative;
+    margin:0 auto;
+    text-align: center;
+    margin-top: -26px;
+}
+
+.links ul li{
+    list-style: none;
+}
+
+.icon-tempo{
+    margin-bottom: -46px;
+}
+
+#forecast{
+    position: relative;
+    top: -44px;
+    width: 584px;
+    margin:0 auto;
+}
+
+#forecast ul li {
+  font-family: 'Lato', sans-serif !important;
+  font-size: 4.5em;
+  text-align: center;
+}
+#forecast ul li h3 {
+  font-family: 'Lato', sans-serif !important;
+  font-size: 0.5em;
+}
+#forecast ul li .today h3 {
+  font-family: 'Lato', sans-serif !important;
+  font-size: 0.7em;
+}
