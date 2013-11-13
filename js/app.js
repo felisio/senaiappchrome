@@ -31,7 +31,11 @@ app.provider('Weather', function(){
     };
 });
 
-app.config(function(WeatherProvider){
+app.config(function(WeatherProvider,$routeProvider,$httpProvider){
+    $routeProvider.
+    when('/',{templateUrl:'view/main.html',controller:'MainCtrl'}).
+    otherwise({redirectTo:'/'});
+
     WeatherProvider.setApiKey('57bda8330b9a9e77');
 });
 
